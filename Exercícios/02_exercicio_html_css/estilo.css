@@ -1,0 +1,66 @@
+body{
+    background-color:rgb(109, 104, 117);
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+h1{
+    color: rgb(255, 157, 133);
+    text-align: center;
+    
+    font-family: arial;
+}
+
+h3{
+    color: rgb(229, 152, 155);
+    text-align: center;
+    font-family: arial;
+}
+
+p{
+    color: rgb(255, 205, 178);
+    text-align: center;
+    font-size: 18px;
+    font-family: arial;
+}
+
+
+.center{
+   margin-left: auto;
+   margin-right: auto;
+    color: rgb(255, 242, 235);
+}
+
+
+
+.centerImg{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerImg2{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerImg3{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerImg4{
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+}
+
+
+a{
+    color: rgb(255, 242, 235) ;
+}

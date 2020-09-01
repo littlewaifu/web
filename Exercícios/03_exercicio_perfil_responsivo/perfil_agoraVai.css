@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    background: rgb(167, 153, 180);
+    color:  rgb(32, 3, 65);
+
+}
+
+.divCapaFundo{
+    height: 25vh;
+    background-size: cover;
+    background-image: url(./clipdealer_A105651209_preview.jpg);
+    background-position: 100%;    
+
+}
+
+.divFundoGeral{
+    background: rgb(167, 153, 180);
+}
+
+.divFotoPerfil{
+    float: left;
+    margin-left: 5px;
+    min-width: 10px;
+    max-width: 200px;
+    min-height: 10px;
+    max-height: 200px;
+    margin-top: -50px;
+    width: 10vw;
+    padding-left: 3%;
+}
+
+.divNomeCompleto{
+    position: relative;
+    left: 5vw;
+    top: 2vw;
+    
+}
+
+.divConteudo{
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 3%;
+    font-size: 1.2em;
+    background: rgb(177, 165, 189);
+
+}
+
+.divFixed{
+    position: sticky;
+    background: rgb(124, 99, 150);
+    height: 1%;
+    top: 0;
+    text-align: center;
+    padding: 1%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: cornsilk;
+}
+
+.name{
+    color: cornsilk;
+    font-size: 2.5em;
+    position: relative;
+
+}
+
+.link{
+    text-align: right;
+    right: 5vw;
+    position: relative;
+}
+
+.imagemPerfil{
+    width: 100%;
+    border: 3px solid rgb(69, 48, 92);
+
+    border-radius: 20px;
+}
+
+.imagemCapa{
+    background-size: cover;
+    background-image: url(./clipdealer_A105651209_preview.jpg);
+    background-position: 100%;    
+}

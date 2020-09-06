@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.divLogo{
+    width: 100vw;
+}
+
+.imgLogo{
+    width: 100%;
+}
+
+.divMenu{
+    position: fixed;
+    top: 0;
+    width: 32vw;
+    
+    background-color: rgb(193, 193, 233);
+}
+
+.divEquipe{
+    position: relative;
+    background-color: rgb(145, 145, 145);
+}
+
+.divProjeto{
+    background-color: rgb(126, 126, 247);
+}
+
+.divProjIndiv{
+    background-color: rgb(65, 65, 192);
+}
+
+.text{
+    text-align: center;
+}

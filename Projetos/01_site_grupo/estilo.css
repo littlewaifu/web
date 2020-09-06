@@ -22,17 +22,35 @@
 
 .divEquipe{
     position: relative;
-    background-color: rgb(145, 145, 145);
+    
 }
 
 .divProjeto{
-    background-color: rgb(126, 126, 247);
+
+
 }
 
 .divProjIndiv{
-    background-color: rgb(65, 65, 192);
+
+
 }
 
 .text{
     text-align: center;
+}
+
+.bodybg{
+    color: papayawhip;
+    background-color: papayawhip;
+    background-image: url(https://nuwallpaperhd.info/wp-content/uploads/2018/01/Space-Star-Black-wallpaper-Backgrounds.jpg);
+}
+
+.titleDetalheProj{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: papayawhip;
+}
+
+.divBg{
+    background: rgba(255, 232, 195, 0.1);
 }

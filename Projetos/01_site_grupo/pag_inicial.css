@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.divLogo{
+    width: 100vw;
+}
+
+.imgLogo{
+    width: 100%;
+}
+
+.divMenu{
+    float: left;
+    background-color: navy;
+}
+
+.divEquipe{
+    background-color: rgb(65, 65, 192);
+}
+
+.divProjeto{
+    background-color: navy;
+}
+
+.divProjIndiv{
+    background-color: rgb(65, 65, 192);
+}

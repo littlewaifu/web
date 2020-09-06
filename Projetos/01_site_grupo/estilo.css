@@ -13,30 +13,7 @@
 }
 
 .divMenu{
-    position: fixed;
-    top: 0;
-    width: 32vw;
-    
-    background-color: rgb(193, 193, 233);
-}
-
-.divEquipe{
-    position: relative;
-    
-}
-
-.divProjeto{
-
-
-}
-
-.divProjIndiv{
-
-
-}
-
-.text{
-    text-align: center;
+    background-color: rgb(0, 0, 0);
 }
 
 .bodybg{
@@ -48,9 +25,23 @@
 .titleDetalheProj{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    color: papayawhip;
+    color:#FF8F1F;
 }
 
 .divBg{
     background: rgba(255, 232, 195, 0.1);
+}
+
+.link{
+    color:#FF8F1F;
+}
+
+.link:hover{
+    color:#ffc285;
+}
+
+
+.divImgProjMari{
+    width: 25vw;
+    
 }

@@ -3,7 +3,6 @@
     padding: 0;
 }
 
-
 .divLogo{
     width: 100vw;
 }
@@ -15,8 +14,6 @@
 .imgCel{
     width: 70%;
 }
-
-
 
 .divMenu{
     background-color: #FF8F1F;
@@ -31,10 +28,7 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     color:#FF8F1F;
-}
-
-.divBg{
-    background: rgba(255, 232, 195, 0);
+    text-align: center;
 }
 
 .link{
@@ -47,4 +41,12 @@
 
 .carouselSize{
     width: 70%;
+}
+
+.fotopadrao{
+    width: 100%;
+}
+
+.alinharCentro{
+    margin: auto;
 }

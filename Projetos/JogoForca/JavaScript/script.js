@@ -1,4 +1,5 @@
 var palavra = new Array();
+var imagemLetra;
 function jogar(){
 
     palavra[0] = "r";

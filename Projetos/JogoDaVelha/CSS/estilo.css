@@ -1,17 +1,23 @@
-#jogo{
+#jogoVelha{
     width:603px;
     height:600px;
     border:solid 3px
 }
- 
-.linha{
-    height:200px;
-    border-bottom:solid 1px;
-}
- 
-.casa{
+.quad{
     width:200px;
     height:100%;
     border-right:solid 1px;
     float:left;
 }
+
+
+.bg{
+    background-color: darkgrey;
+    color: antiquewhite;
+}
+ 
+.line{
+    height:200px;
+    border-bottom:solid 1px;
+}
+ 

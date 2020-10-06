@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/estilo.css">
-    <script src="./JS/script.js"></script>
-    <title>Document</title>
+    <title>Jogo da Velha</title>
 </head>
 
 <body class="bg">
     <div id="cabecalho" class="ajeitar">
         <h1>Jogo da Velha</h1>
-        <h3>Vez do:</h3>
-        <img id="proxJogador" src="" alt="">
+        <h3 id="jogadorAtual"></h3>
+        <img id="jogadorAtualImg" src="" alt="">
+    </div>
+    <div class="ajeitar">
+        <button onclick="novoJogo()">Novo Jogo</button>
     </div>
     <div class="ajeitar" id="jogoVelha">
-
         <div class="line">
             <div class="quad" onclick="jogada('a1')"><img id="a1"  src="" alt=""></div>
             <div class="quad"  onclick="jogada('a2')" ><img id="a2" src="" alt=""></div>
@@ -34,7 +35,7 @@
         </div>
     </div>
     <div id="resultado"></div>
-
+    <script src="./JS/script.js"></script>
 </body>
 
 </html>

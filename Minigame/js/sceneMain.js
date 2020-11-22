@@ -4,8 +4,8 @@ class SceneMain extends Phaser.Scene {
     }
     preload() {
         // carrega as imagens
-        this.load.image('alien','images/alien_skooter00.png')
-        this.load.image('blue', 'images/blue.png');
+        this.load.image('alien','image\character\alien0.png')
+        this.load.image('blue', 'image\platform\blue.png');
     }
     create() {
         // adiciona o score no jogo

@@ -4,10 +4,14 @@ class SceneMain extends Phaser.Scene {
     }
     preload() {
         // carrega as imagens
-        this.load.image('alien','image\character\alien0.png')
-        this.load.image('blue', 'image\platform\blue.png');
+        this.load.image('alien','image/character/alien0.png');
+        this.load.image('blue', 'image/platform/blue.png');
+        this.load.image('sky', 'image/space-background.png');
     }
     create() {
+        this.add.sprite(game.config.width/2,
+            game.config.height/2,'sky');
+
         // adiciona o score no jogo
         this.score = -1;
         this.labelScore = this.add.text(20, 20, 'score: 0',
@@ -20,24 +24,24 @@ class SceneMain extends Phaser.Scene {
         // cria um grupo de canos
         this.blues = this.physics.add.group();
         // chama a criação de uma fileira de canos a cada 2 segundos
-        this.timedEvent = this.time.addEvent({ delay: 2000, callback: this.addRowOfPipes, callbackScope: this, loop: true });
+        this.timedEvent = this.time.addEvent({ delay: 2000, callback: this.addPlatform, callbackScope: this, loop: true });
 
         // adiciona o pássaro no jogo
         this.alien = this.physics.add.sprite(100,300,'alien');
         
         // define gravidade para o pássaro cair
-        this.alien.setGravityY(200);
+        this.alien.setGravityY(300);
 
         // adiciona interação mouse e tecla de espaço
         this.input.on('pointerdown', this.moveAlien, this);
         this.spaceKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
     }
-    moveBird() {
+    moveAlien() {
         // define a velocidade da gravidade do pássaro a cada clique/tecla
-        this.alien.setVelocity(0, -100);
+        this.alien.setVelocity(0, -200);
     }
-    addRowOfPipes() {
+    addPlatform() {
         // sorteia um valor entre 1 e 5
         // essa posição será o buraco na fileira de canos
         var hole = Math.floor(Math.random() * 5) + 1;
@@ -46,7 +50,7 @@ class SceneMain extends Phaser.Scene {
         // deixando 2 espaços na posição sorteada (hole e hole + 1)
         for (var i = 0; i < 8; i++)
             if (i != hole && i != hole + 1)
-                this.blues.create(400, i * 60 + 30, 'pipe');
+                this.blues.create(400, i * 60 + 30, 'blue');
 
         // define a velocidade da movimentação da fileira de canos
         this.blues.setVelocityX(-200);

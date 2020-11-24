@@ -25,6 +25,4 @@ class SceneStart extends Phaser.Scene {
         // reinicia o jogo
          this.scene.start('SceneMain');
     }
-    update() {
-    }
 }

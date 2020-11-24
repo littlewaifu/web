@@ -30,7 +30,7 @@ class SceneMain extends Phaser.Scene {
         this.alien = this.physics.add.sprite(100,300,'alien');
         
         // define gravidade para o pássaro cair
-        this.alien.setGravityY(400);
+        this.alien.setGravityY(500);
 
         // adiciona interação mouse e tecla de espaço
         this.input.on('pointerdown', this.moveAlien, this);

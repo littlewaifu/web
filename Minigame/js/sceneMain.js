@@ -65,7 +65,7 @@ class SceneMain extends Phaser.Scene {
     }
     restartGame() {
         // reinicia o jogo;
-        this.scene.start('SceneMain');
+        this.scene.start('SceneDead');
     }
     update() {
         // se a tecla de espaço for pressionada, movimenta o pássaro

@@ -5,8 +5,16 @@ class SceneMain extends Phaser.Scene {
     preload() {
         // carrega as imagens
         this.load.image('alien','image/character/alien0.png');
-        this.load.image('blue', 'image/platform/blue.png');
+        
         this.load.image('sky', 'image/space-background.png');
+
+        this.load.image('blue', 'image/platform/blue.png');
+        this.load.image('cyan', 'image/platform/cyan.png');
+        this.load.image('green', 'image/platform/green.png');
+        this.load.image('pink', 'image/platform/pink.png');
+        this.load.image('purple', 'image/platform/purple.png');
+        this.load.image('red', 'image/platform/red.png');
+        this.load.image('yellow', 'image/platform/yellow.png');
     }
     create() {
         this.add.sprite(game.config.width/2,
@@ -22,7 +30,7 @@ class SceneMain extends Phaser.Scene {
             });
 
         // cria um grupo de canos
-        this.blues = this.physics.add.group();
+        this.pipes = this.physics.add.group();
         // chama a criação de uma fileira de canos a cada 2 segundos
         this.timedEvent = this.time.addEvent({ delay: 2000, callback: this.addPlatform, callbackScope: this, loop: true });
 
@@ -42,6 +50,10 @@ class SceneMain extends Phaser.Scene {
         this.alien.setVelocity(0, -200);
     }
     addPlatform() {
+        // adiciona as imagens num array e sorteia
+        var pipeColors = ['blue', 'cyan', 'green', 'pink', 'purple', 'red', 'yellow'];
+        var randomColor = pipeColors[Math.floor(Math.random() * pipeColors.length)];
+
         // sorteia um valor entre 1 e 5
         // essa posição será o buraco na fileira de canos
         var hole = Math.floor(Math.random() * 5) + 1;
@@ -50,14 +62,14 @@ class SceneMain extends Phaser.Scene {
         // deixando 2 espaços na posição sorteada (hole e hole + 1)
         for (var i = 0; i < 8; i++)
             if (i != hole && i != hole + 1)
-                this.blues.create(400, i * 60 + 30, 'blue');
+                this.pipes.create(400, i * 60 + 30, randomColor);
 
         // define a velocidade da movimentação da fileira de canos
-        this.blues.setVelocityX(-200);
+        this.pipes.setVelocityX(-200);
 
         // apaga a fileira de canos quando não for mais visível
-        this.blues.checkWorldBounds = true;
-        this.blues.outOfBoundsKill = true;
+        this.pipes.checkWorldBounds = true;
+        this.pipes.outOfBoundsKill = true;
 
         // atualiza score
         this.score += 1;
@@ -73,7 +85,7 @@ class SceneMain extends Phaser.Scene {
             this.moveAlien();
 
         // checando colisão com a fileira de canos
-        this.physics.world.collide(this.alien, this.blues, function () {
+        this.physics.world.collide(this.alien, this.pipes, function () {
             this.restartGame();
         }, null, this);
 

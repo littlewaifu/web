@@ -23,7 +23,7 @@ class SceneMain extends Phaser.Scene {
     create() {
        
 
-        var jump = this.sound.add('jump', {volume: 0.1});
+        this.jump = this.sound.add('jump', {volume: 0.1});
 
         this.add.sprite(game.config.width/2,
             game.config.height/2,'sky');
@@ -50,7 +50,7 @@ class SceneMain extends Phaser.Scene {
 
         // adiciona interação mouse e tecla de espaço
         this.input.on('pointerdown', this.moveAlien, this);
-        jump.play();
+        
         this.spaceKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
 
@@ -58,7 +58,7 @@ class SceneMain extends Phaser.Scene {
     moveAlien() {
         // define a velocidade da gravidade do pássaro a cada clique/tecla
         this.alien.setVelocity(0, -200);
-    
+        this.jump.play();
     }
     addPlatform() {
         // adiciona as imagens num array e sorteia

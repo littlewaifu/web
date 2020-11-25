@@ -107,3 +107,6 @@ class SceneMain extends Phaser.Scene {
         }
     }
 }
+
+
+//objeto.setFrame(1);

@@ -5,8 +5,15 @@ class SceneStart extends Phaser.Scene {
     preload() {
         this.load.image('logo', 'image/logo.png');
         this.load.image('sky', 'image/space-background.png');
+        this.load.audio('theme','sound/894185_Among-Us-Theme.mp3');
+
     }
     create() {
+        var music = this.sound.add('theme', {volume: 0.2});
+        music.setLoop(true);
+        music.play();
+
+
         this.add.sprite(game.config.width/2,
             game.config.height/2,'sky');
         this.add.sprite(game.config.width/2,

@@ -15,8 +15,16 @@ class SceneMain extends Phaser.Scene {
         this.load.image('purple', 'image/platform/purple.png');
         this.load.image('red', 'image/platform/red.png');
         this.load.image('yellow', 'image/platform/yellow.png');
+
+        // carrega os sons
+        this.load.audio('jump', 'sound/maro-jump-sound-effect_1.mp3');
+        this.load.audio('theme','sound/894185_Among-Us-Theme.mp3');
     }
     create() {
+       
+
+        var jump = this.sound.add('jump', {volume: 0.1});
+
         this.add.sprite(game.config.width/2,
             game.config.height/2,'sky');
 
@@ -42,12 +50,15 @@ class SceneMain extends Phaser.Scene {
 
         // adiciona interação mouse e tecla de espaço
         this.input.on('pointerdown', this.moveAlien, this);
+        jump.play();
         this.spaceKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+
 
     }
     moveAlien() {
         // define a velocidade da gravidade do pássaro a cada clique/tecla
         this.alien.setVelocity(0, -200);
+    
     }
     addPlatform() {
         // adiciona as imagens num array e sorteia
@@ -83,6 +94,7 @@ class SceneMain extends Phaser.Scene {
         // se a tecla de espaço for pressionada, movimenta o pássaro
         if (this.spaceKey.isDown)
             this.moveAlien();
+           
 
         // checando colisão com a fileira de canos
         this.physics.world.collide(this.alien, this.pipes, function () {
